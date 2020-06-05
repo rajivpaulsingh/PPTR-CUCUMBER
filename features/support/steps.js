@@ -1,4 +1,4 @@
-const { Given, When, The, Before, After, And } = require("cucumber");
+const { Given, When, Then, Before, After } = require("cucumber");
 
 Before(async function() {
     return await this.launchBrowser();
@@ -13,10 +13,10 @@ Given('I open the login page', async function() {
 });
 
 When('I fill the login form', async function() {
-    return await this.filleLoginForm();
+    return await this.fillLoginForm();
 });
 
-Given('I click on submit button', async function() {
+When('I click on submit button', async function() {
     return await this.submitLogin();
 });
 
